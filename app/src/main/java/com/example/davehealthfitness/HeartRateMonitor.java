@@ -17,7 +17,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.healthtracker.R;
+import com.example.davehealthfitness.R;
 
 
 public class HeartRateMonitor extends Activity {
@@ -89,7 +89,7 @@ public class HeartRateMonitor extends Activity {
     public void onResume() {
         super.onResume();
 
-        wakeLock.acquire();
+        wakeLock.acquire(10*60*1000L /*10 minutes*/);
 
         camera = Camera.open();
 
@@ -111,7 +111,7 @@ public class HeartRateMonitor extends Activity {
         camera = null;
     }
 
-    private static PreviewCallback previewCallback = new PreviewCallback() {
+    private static final PreviewCallback previewCallback = new PreviewCallback() {
 
         /**
          * {@inheritDoc}

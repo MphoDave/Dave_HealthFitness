@@ -10,8 +10,6 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.example.healthtracker.R;
-
 public class HeartbeatView extends View {
 
     private static final Matrix matrix = new Matrix();
@@ -56,7 +54,7 @@ public class HeartbeatView extends View {
     protected void onDraw(Canvas canvas) {
         if (canvas == null) throw new NullPointerException();
 
-        Bitmap bitmap = null;
+        Bitmap bitmap;
         if (HeartRateMonitor.getCurrent() == HeartRateMonitor.TYPE.GREEN) bitmap = greenBitmap;
         else bitmap = redBitmap;
 
