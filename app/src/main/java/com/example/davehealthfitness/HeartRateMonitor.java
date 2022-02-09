@@ -17,6 +17,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.healthtracker.R;
+
 
 public class HeartRateMonitor extends Activity {
 

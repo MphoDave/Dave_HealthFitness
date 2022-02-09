@@ -10,6 +10,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.example.healthtracker.R;
+
 public class HeartbeatView extends View {
 
     private static final Matrix matrix = new Matrix();
